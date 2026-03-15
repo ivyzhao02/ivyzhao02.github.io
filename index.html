@@ -113,7 +113,7 @@ body {
 
 /* ── SIDEBAR ── */
 #sidebar {
-  width: 210px;
+  width: 270px;
   flex-shrink: 0;
   background: rgba(255,255,255,0.42);
   backdrop-filter: blur(12px);
@@ -125,20 +125,20 @@ body {
   z-index: 10;
 }
 #sidebar-header {
-  padding: 14px 12px 12px;
+  padding: 16px 14px 14px;
   border-bottom: 2px solid rgba(255,255,255,0.55);
   flex-shrink: 0;
 }
 #sidebar-name {
   font-family: 'Press Start 2P', monospace;
-  font-size: 7px;
+  font-size: 9px;
   color: var(--pixel-label);
   line-height: 1.7;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 #sidebar-sub {
   font-style: italic;
-  font-size: 9px;
+  font-size: 12px;
   color: #7a6b72;
   line-height: 1.5;
 }
@@ -155,18 +155,18 @@ body {
 
 .nav-section-label {
   font-family: 'Press Start 2P', monospace;
-  font-size: 6px;
+  font-size: 8px;
   color: var(--pixel-label2);
-  padding: 10px 12px 4px;
+  padding: 12px 14px 5px;
   letter-spacing: 0.5px;
   display: block;
 }
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 10px;
-  font-size: 11px;
+  gap: 10px;
+  padding: 9px 12px;
+  font-size: 13px;
   color: #5a4a52;
   border-left: 3px solid transparent;
   cursor: pointer;
@@ -181,8 +181,8 @@ body {
 }
 .nav-item svg {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 .nav-item-label { flex: 1; }
 
@@ -195,8 +195,8 @@ body {
 .nav-sub-item {
   display: flex;
   align-items: center;
-  padding: 5px 10px 5px 36px;
-  font-size: 10px;
+  padding: 6px 12px 6px 46px;
+  font-size: 12px;
   color: var(--muted);
   cursor: pointer;
   border-left: 3px solid transparent;
@@ -349,6 +349,13 @@ body {
   font-style: italic;
   font-size: 11px;
   color: var(--muted);
+}
+.panel-note-date {
+  font-style: italic;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 14px;
+  opacity: 0.85;
 }
 .pixel-btn {
   display: inline-block;
@@ -620,6 +627,7 @@ body {
       </div>
       <div class="panel-body">
         <div class="panel-heading">about me (work)</div>
+        <div class="panel-note-date">last updated march 2026</div>
         <div class="panel-date">UW 2026 · available from april 2026</div>
         <p style="font-size:11.5px;margin-bottom:4px;">hi, I'm Ivy! Communications grad from Waterloo with a background in content, marketing, and making things clear for the people reading them.</p>
 
@@ -649,6 +657,7 @@ body {
       </div>
       <div class="panel-body">
         <div class="panel-heading">about me (personal)</div>
+        <div class="panel-note-date">written march 2026</div>
         <div class="panel-date">hi! (or berry, if we met on discord)</div>
 
         <div class="section-heading">games:</div>
@@ -677,6 +686,7 @@ body {
       </div>
       <div class="panel-body">
         <div class="panel-heading">work &amp; projects</div>
+        <div class="panel-note-date">last updated march 2026</div>
         <div class="panel-date">things I've made and done</div>
 
         <div class="section-heading">digital extremes (warframe):</div>
@@ -701,7 +711,7 @@ body {
       <div class="panel-body">
         <div class="pixel-tag">/ now</div>
         <div class="panel-heading">in the now...</div>
-        <div class="panel-date">last updated march 2026</div>
+        <div class="panel-note-date">last updated march 2026</div>
 
         <div class="section-heading">where I'm at:</div>
         <div class="bullet"><span class="bullet-dash">–</span><span>finishing my last term at Waterloo, exams done early April</span></div>
@@ -724,7 +734,7 @@ body {
       </div>
       <div class="panel-body">
         <div class="panel-heading">resume</div>
-        <div class="panel-date">updated 2026</div>
+        <div class="panel-note-date">updated march 2026</div>
         <div style="margin-top:10px">
           <a href="#" class="pixel-btn">resume (general) ↗</a>
           <a href="#" class="pixel-btn">resume (games) ↗</a>
@@ -742,6 +752,7 @@ body {
       </div>
       <div class="panel-body">
         <div class="panel-heading">say hi</div>
+        <div class="panel-note-date">written march 2026</div>
         <div class="panel-date">always happy to chat</div>
         <div style="margin-top:10px">
           <a href="#" class="pixel-btn">email ↗</a>
@@ -761,6 +772,7 @@ body {
       <div class="panel-body">
         <div class="pixel-tag">/ now · march 2026</div>
         <div class="panel-heading">march 2026</div>
+        <div class="panel-note-date">written march 2026</div>
         <p class="panel-hint">archive entry — coming soon</p>
       </div>
       <div class="panel-resize" data-panel="march2026">···</div>
@@ -776,6 +788,7 @@ body {
       <div class="panel-body">
         <div class="pixel-tag">/ now · feb 2026</div>
         <div class="panel-heading">feb 2026</div>
+        <div class="panel-note-date">written feb 2026</div>
         <p class="panel-hint">archive entry — coming soon</p>
       </div>
       <div class="panel-resize" data-panel="feb2026">···</div>
