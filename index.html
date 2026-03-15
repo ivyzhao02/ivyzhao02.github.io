@@ -312,21 +312,21 @@ body {
 .panel-heading {
   font-family: 'Lora', serif;
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--heading);
   margin-bottom: 3px;
   line-height: 1.3;
 }
 .panel-date {
   font-family: 'Press Start 2P', monospace;
-  font-size: 6px;
+  font-size: 7px;
   color: var(--muted);
   margin-bottom: 12px;
   letter-spacing: 0.3px;
 }
 .section-heading {
   font-family: 'Press Start 2P', monospace;
-  font-size: 7px;
+  font-size: 8px;
   color: var(--pixel-label2);
   margin: 14px 0 7px;
   letter-spacing: 0.5px;
@@ -335,7 +335,7 @@ body {
   display: flex;
   gap: 6px;
   margin-bottom: 4px;
-  font-size: 11.5px;
+  font-size: 13px;
   line-height: 1.65;
   color: var(--body);
 }
@@ -361,7 +361,7 @@ body {
   display: inline-block;
   padding: 5px 11px;
   margin: 3px 3px 0 0;
-  font-size: 10px;
+  font-size: 12px;
   color: #7a3a5a;
   background: rgba(255,255,255,0.6);
   border: 2px solid rgba(200,150,170,0.6);
@@ -393,6 +393,32 @@ body {
   color: var(--muted);
   font-style: italic;
   margin: 6px 0;
+}
+.work-section-intro {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.65;
+}
+.work-entry { margin-bottom: 10px; }
+.work-entry-link {
+  padding-left: 18px;
+  margin-top: 3px;
+}
+.work-entry-link a {
+  font-size: 11px;
+  color: var(--pink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(224,112,144,0.35);
+  transition: border-color 0.1s;
+}
+.work-entry-link a:hover { border-bottom-color: var(--pink); }
+.work-video {
+  display: block;
+  max-width: 100%;
+  margin: 6px 0 0 18px;
+  border: 1px solid rgba(200,150,170,0.35);
 }
 
 /* ── MOBILE ── */
@@ -671,7 +697,7 @@ body {
         <div class="panel-heading">about me (work)</div>
         <div class="panel-note-date">last updated march 2026</div>
         <div class="panel-date">UW 2026 · available from april 2026</div>
-        <p style="font-size:11.5px;margin-bottom:4px;">hi, I'm Ivy! Communications grad from Waterloo with a background in content, marketing, and making things clear for the people reading them.</p>
+        <p style="font-size:13px;margin-bottom:4px;">Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them.</p>
 
         <div class="section-heading">currently:</div>
         <div class="bullet"><span class="bullet-dash">–</span><span>finishing my BA at Waterloo, exams done early April</span></div>
@@ -700,7 +726,7 @@ body {
       <div class="panel-body">
         <div class="panel-heading">about me (personal)</div>
         <div class="panel-note-date">written march 2026</div>
-        <div class="panel-date">hi! (or berry, if we met on discord)</div>
+        <div class="panel-date">hi, I'm Ivy! (or berry, if we met on discord)</div>
 
         <div class="section-heading">games:</div>
         <div class="bullet"><span class="bullet-dash">–</span><span>957 hours in Warframe, which I also got to work on!</span></div>
@@ -730,16 +756,62 @@ body {
       <div class="panel-body">
         <div class="panel-heading">work &amp; projects</div>
         <div class="panel-note-date">last updated march 2026</div>
-        <div class="panel-date">things I've made and done</div>
+        <p class="panel-hint" style="margin-bottom:14px">doing stuff and helping people is fun</p>
 
-        <div class="section-heading">digital extremes (warframe):</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>player-facing content across web, social, and in-game channels</span></div>
-        <div class="project-placeholder">[ project cards — coming soon ]</div>
+        <div class="section-heading">web content @ digital extremes (warframe)</div>
+        <p class="work-section-intro">Player-facing content written and published on warframe.com during my co-op term (June–August 2025). Coordinated across development, art, community, and marketing teams to hit tight release windows.</p>
 
-        <div class="section-heading">other projects:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>this website (meta, I know)</span></div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Countdown to TennoCon 2025 — multi-channel hype piece coordinating Twitch Drop logistics across three event days, community artist credits, and partner giveaways for a global playerbase</span></div>
+          <div class="work-entry-link"><a href="https://www.warframe.com/en/news/countdown-to-tennocon-2025-en" target="_blank" rel="noopener">↗ warframe.com</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>TennoGen Isleweaver Available Now — community cosmetics spotlight cataloguing items across multiple creators with individual artist credits and storefront descriptions</span></div>
+          <div class="work-entry-link"><a href="https://www.warframe.com/en/news/tennogen-isleweaver-coming-soon" target="_blank" rel="noopener">↗ warframe.com</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Dog Days 2025 — seasonal event launch post bridging marketing and game comms: balance change communication, new reward breakdowns, accessibility improvements, and community artist credits</span></div>
+          <div class="work-entry-link"><a href="https://www.warframe.com/en/news/dog-days-2025" target="_blank" rel="noopener">↗ warframe.com</a></div>
+        </div>
 
-        <p class="panel-hint" style="margin-top:12px">more coming soon!</p>
+        <div class="section-heading">social &amp; game capture @ digital extremes (warframe)</div>
+        <p class="work-section-intro">Game capture and in-game content creation for @playwarframe on Instagram and TikTok (June–August 2025). Involved in shooting, staging, and producing short-form video and photo content.</p>
+
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Fridgeframe — 444K views on Instagram · 258.3K on TikTok</span></div>
+          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DMS9J63MTum/" target="_blank" rel="noopener">↗ instagram</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Qorvex x Plague Star — 351K views on Instagram · 236.5K on TikTok (released after my term ended, but this one was mine 🩷)</span></div>
+          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DOHG6pqgtnk/" target="_blank" rel="noopener">↗ instagram</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Merulina Prime — 210K views on Instagram · 49.8K on TikTok</span></div>
+          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DKc8d_OCHtd/" target="_blank" rel="noopener">↗ instagram</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Operator Hairstyles (Flare, Minerva, Velimir, Kaya) — my operator was used! · 143K views on Instagram · 21K on TikTok</span></div>
+          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DLkir2LiGXC/" target="_blank" rel="noopener">↗ instagram</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>TennoCon 2025 VA Collab — 155K views on Instagram · 103.1K on TikTok</span></div>
+          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DMQPmvoCVpI/" target="_blank" rel="noopener">↗ instagram</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Qorvex x Pride Month — 85.2K views on Instagram · 31.4K on TikTok · gained real experience moderating comments sections on sensitive content</span></div>
+          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DK2k_ScikGY/" target="_blank" rel="noopener">↗ instagram</a></div>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>Valkyr Heirloom (TikTok exclusive) — 100.9K views on TikTok · no Instagram link available</span></div>
+          <video class="work-video" src="valkyr-heirloom.mp4" controls></video>
+        </div>
+        <div class="work-entry">
+          <div class="bullet"><span class="bullet-dash">–</span><span>TennoCon 2025 Writing on the Wall — Instagram Story; that's my hand 🙂</span></div>
+          <video class="work-video" src="tennocon-writing-on-wall.mp4" controls></video>
+        </div>
+
+        <div class="section-heading">other</div>
+        <div class="bullet"><span class="bullet-dash">–</span><span>this site — designed and built ivyzhao.ca from scratch (with a little help from Claude)</span></div>
       </div>
       <div class="panel-resize" data-panel="projects">···</div>
     </div>
@@ -779,8 +851,8 @@ body {
         <div class="panel-heading">resume</div>
         <div class="panel-note-date">updated march 2026</div>
         <div style="margin-top:10px">
-          <a href="#" class="pixel-btn">resume (general) ↗</a>
-          <a href="#" class="pixel-btn">resume (games) ↗</a>
+          <a href="Ivy Zhao Resume.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (general) ↗</a>
+          <a href="Ivy Zhao Resume GI.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (games) ↗</a>
         </div>
       </div>
       <div class="panel-resize" data-panel="resume">···</div>
