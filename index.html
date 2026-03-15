@@ -225,7 +225,7 @@ body {
   top: 12px;
   left: 12px;
   width: calc(100% - 24px);
-  height: 320px;
+  height: 480px;
   background: var(--frosted-bg);
   backdrop-filter: blur(10px);
   border: 2px solid var(--frosted-border);
@@ -484,6 +484,27 @@ body {
       <div id="sidebar-sub">marketing &amp; comms<br>available april 2026</div>
     </div>
     <div id="sidebar-nav">
+      <div class="nav-item" onclick="openPanel('hello')" id="nav-hello">
+        <!-- Sparkle star icon -->
+        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="1" width="2" height="3" rx="0.4" fill="#e07090"/>
+          <rect x="8" y="14" width="2" height="3" rx="0.4" fill="#e07090"/>
+          <rect x="1" y="8" width="3" height="2" rx="0.4" fill="#e07090"/>
+          <rect x="14" y="8" width="3" height="2" rx="0.4" fill="#e07090"/>
+          <rect x="8" y="4" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
+          <rect x="8" y="12" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
+          <rect x="4" y="8" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
+          <rect x="12" y="8" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
+          <rect x="8" y="7" width="2" height="4" rx="0.4" fill="#e07090"/>
+          <rect x="7" y="8" width="4" height="2" rx="0.4" fill="#e07090"/>
+          <rect x="6" y="6" width="2" height="2" rx="0.4" fill="#f4a8b8" opacity="0.5"/>
+          <rect x="10" y="6" width="2" height="2" rx="0.4" fill="#f4a8b8" opacity="0.5"/>
+          <rect x="6" y="10" width="2" height="2" rx="0.4" fill="#f4a8b8" opacity="0.5"/>
+          <rect x="10" y="10" width="2" height="2" rx="0.4" fill="#f4a8b8" opacity="0.5"/>
+        </svg>
+        <span class="nav-item-label">hello :)</span>
+      </div>
+
       <span class="nav-section-label">pinned</span>
 
       <div class="nav-item" onclick="openPanel('work')">
@@ -618,6 +639,22 @@ body {
   <!-- Main area -->
   <div id="main">
 
+    <!-- Panel: hello :) -->
+    <div class="panel" id="panel-hello" data-title="hello :)">
+      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
+      <div class="panel-titlebar" id="titlebar-hello">
+        <span class="panel-title">hello :)</span>
+        <div class="panel-close" onclick="closePanel('hello')">✕</div>
+      </div>
+      <div class="panel-body">
+        <div class="panel-heading" style="font-size:22px">ivy zhao</div>
+        <div class="panel-note-date">written march 2026</div>
+        <div class="panel-date" style="margin-bottom:14px">Marketing &amp; Communications &nbsp;|&nbsp; Content Operations &amp; Social Media &nbsp;|&nbsp; UW 2026</div>
+        <p style="font-size:12px;line-height:1.75;color:var(--body)">Hi, I'm Ivy! I'm a Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them. Based in Markham, ON. Available full-time from April 2026.</p>
+      </div>
+      <div class="panel-resize" data-panel="hello">···</div>
+    </div>
+
     <!-- Panel: about me (work) -->
     <div class="panel" id="panel-work" data-title="about me (work version)">
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
@@ -667,9 +704,10 @@ body {
 
         <div class="section-heading">music:</div>
         <div class="bullet"><span class="bullet-dash">–</span><span>depends entirely on the day — somewhere between Laufey and late 90s kpop, with detours into vocaloid, mandopop, and Sabrina Carpenter</span></div>
+        <div class="bullet"><span class="bullet-dash">–</span><span>I have a playlist for my favourite eras and dedicated artist playlists too!</span></div>
 
         <div class="section-heading">other things:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>AAPI and intersectional feminist advocacy</span></div>
+        <div class="bullet"><span class="bullet-dash">–</span><span>AAPI and intersectional feminist advocacy: my family's Shanghai-to-Markham journey is why I'm here</span></div>
         <div class="bullet"><span class="bullet-dash">–</span><span>Sanrio, stuffed animals, cats, and cute things generally</span></div>
         <div class="bullet"><span class="bullet-dash">–</span><span>salmon sashimi and grapes with complete and unwavering devotion</span></div>
         <div class="bullet"><span class="bullet-dash">–</span><span>reading when the right thing finds me: bell hooks, game lore deep dives, the occasional isekai romance novel</span></div>
@@ -714,7 +752,7 @@ body {
         <div class="panel-note-date">last updated march 2026</div>
 
         <div class="section-heading">where I'm at:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>finishing my last term at Waterloo, exams done early April</span></div>
+        <div class="bullet"><span class="bullet-dash">–</span><span>finished my BA at Waterloo in April</span></div>
         <div class="bullet"><span class="bullet-dash">–</span><span>job searching (if you're hiring, hi 🍑)</span></div>
         <div class="bullet"><span class="bullet-dash">–</span><span>listening to Karencici on loop</span></div>
         <div class="bullet"><span class="bullet-dash">–</span><span>taking life day by day</span></div>
@@ -924,6 +962,11 @@ window.addEventListener('resize', function() {
     document.body.classList.remove('mobile-panel');
   }
 });
+
+// ── Open hero panel by default on desktop ──
+if (window.innerWidth > 768) {
+  openPanel('hello');
+}
 </script>
 </body>
 </html>
