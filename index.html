@@ -916,6 +916,11 @@ function openPanel(id) {
     return;
   }
 
+  // Close all currently open panels before opening the new one
+  document.querySelectorAll('.panel.open').forEach(p => {
+    p.classList.remove('open');
+  });
+
   // Desktop: reset position to top-left, bring to front
   panel.style.top = '12px';
   panel.style.left = '12px';
