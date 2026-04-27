@@ -1,5 +1,5 @@
 ## Hi there 👋
-This was vibecoded with Claude Code B)
+This was vibecoded with Claude Code, but from April 27 maintained solo with no AI B)
 <!--
 **ivyzhao02/ivyzhao02** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
