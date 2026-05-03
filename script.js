@@ -1,13 +1,17 @@
 // ── Z-index management ──
 let zTop = 10;
+const DESKTOP_BREAKPOINT = 768;
+
+function isMobileViewport() {
+  return window.innerWidth <= DESKTOP_BREAKPOINT;
+}
 
 // ── Panel open/close ──
 function openPanel(id) {
   const panel = document.getElementById('panel-' + id);
   if (!panel) return;
 
-  const isMobile = window.innerWidth <= 768;
-  if (isMobile) {
+  if (isMobileViewport()) {
     // close all panels
     document.querySelectorAll('.panel').forEach(p => p.classList.remove('open'));
     panel.classList.add('open');
@@ -47,9 +51,38 @@ function mobileBack() {
 function toggleArchive(el) {
   const dropdown = document.getElementById('archive-dropdown');
   const arrow = document.getElementById('archive-arrow');
-  dropdown.classList.toggle('open');
-  arrow.classList.toggle('open');
+  const isOpen = dropdown.classList.toggle('open');
+  arrow.classList.toggle('open', isOpen);
+  if (el) {
+    el.setAttribute('aria-expanded', String(isOpen));
+  }
 }
+
+document.addEventListener('click', function(e) {
+  const openTrigger = e.target.closest('[data-open-panel]');
+  if (openTrigger) {
+    openPanel(openTrigger.dataset.openPanel);
+    return;
+  }
+
+  const closeTrigger = e.target.closest('[data-close-panel]');
+  if (closeTrigger) {
+    closePanel(closeTrigger.dataset.closePanel);
+    return;
+  }
+
+  const actionTrigger = e.target.closest('[data-action]');
+  if (!actionTrigger) return;
+
+  if (actionTrigger.dataset.action === 'mobile-back') {
+    mobileBack();
+    return;
+  }
+
+  if (actionTrigger.dataset.action === 'toggle-archive') {
+    toggleArchive(actionTrigger);
+  }
+});
 
 // ── Drag ──
 (function() {
@@ -58,7 +91,7 @@ function toggleArchive(el) {
   document.addEventListener('mousedown', function(e) {
     const tb = e.target.closest('.panel-titlebar');
     if (!tb || e.target.closest('.panel-close')) return;
-    if (window.innerWidth <= 768) return;
+    if (isMobileViewport()) return;
 
     const panel = tb.closest('.panel');
     bringToFront(panel);
@@ -99,7 +132,7 @@ function toggleArchive(el) {
   document.addEventListener('mousedown', function(e) {
     const handle = e.target.closest('.panel-resize');
     if (!handle) return;
-    if (window.innerWidth <= 768) return;
+    if (isMobileViewport()) return;
     const panel = handle.closest('.panel');
     resizing = panel;
     startY = e.clientY;
@@ -125,12 +158,12 @@ document.addEventListener('mousedown', function(e) {
 
 // ── Handle resize back from mobile ──
 window.addEventListener('resize', function() {
-  if (window.innerWidth > 768) {
+  if (!isMobileViewport()) {
     document.body.classList.remove('mobile-panel');
   }
 });
 
 // ── Open hero panel by default on desktop ──
-if (window.innerWidth > 768) {
+if (!isMobileViewport()) {
   openPanel('hello');
 }

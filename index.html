@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio site for Ivy Zhao, featuring work, projects, resume links, and current updates.">
 <title>ivy zhao — portfolio</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +33,7 @@
 <div id="topbar">
   <span id="topbar-title">© ivy zhao 2026</span>
   <span id="topbar-tag">marketing &amp; comms &nbsp;|&nbsp; available april 2026</span>
-  <div id="topbar-btns">
+  <div id="topbar-btns" aria-hidden="true">
     <div class="tb-btn">_</div>
     <div class="tb-btn">□</div>
     <div class="tb-btn">✕</div>
@@ -40,7 +41,7 @@
 </div>
 
 <!-- Mobile back button (inside #main area, shown only on mobile panel view) -->
-<div id="mobile-back" onclick="mobileBack()">← back</div>
+<div id="mobile-back" data-action="mobile-back">← back</div>
 
 <!-- Layout -->
 <div id="layout">
@@ -54,7 +55,7 @@
     <div id="sidebar-nav">
       <span class="nav-section-label">pinned</span>
 
-      <div class="nav-item" onclick="openPanel('hello')" id="nav-hello">
+      <div class="nav-item" data-open-panel="hello" id="nav-hello">
         <!-- Pixel heart icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="4" width="2" height="2" rx="0.4" fill="#e07090"/>
@@ -81,7 +82,7 @@
         <span class="nav-item-label">hello :)</span>
       </div>
 
-      <div class="nav-item" onclick="openPanel('work')">
+      <div class="nav-item" data-open-panel="work">
         <!-- Journal icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="1" width="11" height="16" rx="0.4" fill="#f4a8b8" opacity="0.8"/>
@@ -95,7 +96,7 @@
         <span class="nav-item-label">about me (work)</span>
       </div>
 
-      <div class="nav-item" onclick="openPanel('personal')">
+      <div class="nav-item" data-open-panel="personal">
         <!-- Leaf icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="8" y="2" width="2" height="2" rx="0.4" fill="#7aca7a"/>
@@ -121,7 +122,7 @@
         <span class="nav-item-label">about me (personal)</span>
       </div>
 
-      <div class="nav-item" onclick="openPanel('projects')">
+      <div class="nav-item" data-open-panel="projects">
         <!-- Folder icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="5" width="4" height="2" rx="0.4" fill="#d8d0d4"/>
@@ -134,7 +135,7 @@
         <span class="nav-item-label">work &amp; projects</span>
       </div>
 
-      <div class="nav-item" onclick="openPanel('now')">
+      <div class="nav-item" data-open-panel="now">
         <!-- Heart strawberry icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="6" y="2" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
@@ -158,7 +159,7 @@
 
       <span class="nav-section-label" style="margin-top:4px">more</span>
 
-      <div class="nav-item" onclick="openPanel('resume')">
+      <div class="nav-item" data-open-panel="resume">
         <!-- Document icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="1" width="10" height="16" rx="0.4" fill="#ede8ea"/>
@@ -173,7 +174,7 @@
         <span class="nav-item-label">resume</span>
       </div>
 
-      <div class="nav-item" onclick="openPanel('contact')">
+      <div class="nav-item" data-open-panel="contact">
         <!-- Envelope icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="4" width="14" height="10" rx="0.4" fill="#f4a8b8"/>
@@ -190,7 +191,7 @@
 
       <span class="nav-section-label" style="margin-top:4px">archive</span>
 
-      <div class="nav-item" onclick="toggleArchive(this)" id="archive-toggle">
+      <div class="nav-item" data-action="toggle-archive" id="archive-toggle" aria-expanded="false" aria-controls="archive-dropdown">
         <!-- Archive box icon -->
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="14" height="3" rx="0.4" fill="#c0b8bc"/>
@@ -203,7 +204,7 @@
         <span class="nav-arrow" id="archive-arrow">▶</span>
       </div>
       <div class="nav-dropdown-body" id="archive-dropdown">
-        <div class="nav-sub-item" onclick="openPanel('march2026')">march 2026</div>
+        <div class="nav-sub-item" data-open-panel="march2026">march 2026</div>
       </div>
 
     </div>
@@ -217,14 +218,14 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-hello">
         <span class="panel-title">hello :)</span>
-        <div class="panel-close" onclick="closePanel('hello')">✕</div>
+        <div class="panel-close" data-close-panel="hello">✕</div>
       </div>
       <div class="panel-body">
-        <img src="ivy-photo.png" alt="Ivy Zhao" style="display:block;width:120px;height:120px;border-radius:50%;border:2px solid rgba(255,255,255,0.6);object-fit:cover;margin:0 auto 16px;">
-        <div class="panel-heading" style="font-size:22px">ivy zhao</div>
+        <img src="ivy-photo.png" alt="Ivy Zhao" class="profile-photo">
+        <div class="panel-heading panel-heading-large">ivy zhao</div>
         <div class="panel-note-date">written march 2026</div>
-        <div class="panel-date" style="margin-bottom:14px">Marketing &amp; Communications &nbsp;|&nbsp; Content Operations &amp; Social Media &nbsp;|&nbsp; UW 2026</div>
-        <p style="font-size:12px;line-height:1.75;color:var(--body)">Hi, I'm Ivy! I'm a Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them. Based in Markham, ON. Available full-time from April 2026.</p>
+        <div class="panel-date panel-date-spaced">Marketing &amp; Communications &nbsp;|&nbsp; Content Operations &amp; Social Media &nbsp;|&nbsp; UW 2026</div>
+        <p class="body-copy-tight">Hi, I'm Ivy! I'm a Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them. Based in Markham, ON. Available full-time from April 2026.</p>
       </div>
       <div class="panel-resize" data-panel="hello">···</div>
     </div>
@@ -234,12 +235,12 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-work">
         <span class="panel-title">about me (work)</span>
-        <div class="panel-close" onclick="closePanel('work')">✕</div>
+        <div class="panel-close" data-close-panel="work">✕</div>
       </div>
       <div class="panel-body">
         <div class="panel-heading">about me (work)</div>
         <div class="panel-note-date">last updated march 2026</div>
-        <p style="font-size:13px;margin-bottom:4px;">Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them.</p>
+        <p class="body-copy-compact">Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them.</p>
 
         <div class="section-heading">currently:</div>
         <div class="bullet"><span class="bullet-dash">–</span><span>finishing my BA at Waterloo, exams done early April</span></div>
@@ -263,7 +264,7 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-personal">
         <span class="panel-title">about me (personal)</span>
-        <div class="panel-close" onclick="closePanel('personal')">✕</div>
+        <div class="panel-close" data-close-panel="personal">✕</div>
       </div>
       <div class="panel-body">
         <div class="panel-heading">about me (personal)</div>
@@ -293,7 +294,7 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-projects">
         <span class="panel-title">work &amp; projects</span>
-        <div class="panel-close" onclick="closePanel('projects')">✕</div>
+        <div class="panel-close" data-close-panel="projects">✕</div>
       </div>
       <div class="panel-body">
         <div class="panel-heading">work &amp; projects</div>
@@ -364,7 +365,7 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-now">
         <span class="panel-title">in the now</span>
-        <div class="panel-close" onclick="closePanel('now')">✕</div>
+        <div class="panel-close" data-close-panel="now">✕</div>
       </div>
       <div class="panel-body">
         <div class="pixel-tag">/ now</div>
@@ -388,12 +389,12 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-resume">
         <span class="panel-title">resume</span>
-        <div class="panel-close" onclick="closePanel('resume')">✕</div>
+        <div class="panel-close" data-close-panel="resume">✕</div>
       </div>
       <div class="panel-body">
         <div class="panel-heading">resume</div>
         <div class="panel-note-date">updated march 2026</div>
-        <div style="margin-top:10px">
+        <div class="panel-link-group">
           <a href="Ivy%20Zhao%20Resume.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (general) ↗</a>
           <a href="Ivy%20Zhao%20Resume%20GI.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (games) ↗</a>
         </div>
@@ -406,13 +407,13 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-contact">
         <span class="panel-title">contact</span>
-        <div class="panel-close" onclick="closePanel('contact')">✕</div>
+        <div class="panel-close" data-close-panel="contact">✕</div>
       </div>
       <div class="panel-body">
         <div class="panel-heading">say hi</div>
         <div class="panel-note-date">written march 2026</div>
         <div class="panel-date">always happy to chat</div>
-        <div style="margin-top:10px">
+        <div class="panel-link-group">
           <a href="mailto:ivy.zhao.career@gmail.com" class="pixel-btn">email ↗</a>
           <a href="https://www.linkedin.com/in/ivyzhao02" target="_blank" rel="noopener" class="pixel-btn">linkedin ↗</a>
         </div>
@@ -425,7 +426,7 @@
       <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
       <div class="panel-titlebar" id="titlebar-march2026">
         <span class="panel-title">now archive — march 2026</span>
-        <div class="panel-close" onclick="closePanel('march2026')">✕</div>
+        <div class="panel-close" data-close-panel="march2026">✕</div>
       </div>
       <div class="panel-body">
         <div class="pixel-tag">/ now · march 2026</div>
