@@ -1,445 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portfolio site for Ivy Zhao, featuring work, projects, resume links, and current updates.">
-<title>ivy zhao — portfolio</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ivy Zhao is an operations-focused communicator with experience in claims payments, vendor coordination, process handoffs, and cross-functional support.">
+  <title>Ivy Zhao | Operations &amp; Communications</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-<!-- Sparkles -->
-<div class="sparkles" aria-hidden="true">
-  <span class="sparkle" style="top:8%;left:7%">✦</span>
-  <span class="sparkle" style="top:15%;left:82%;font-size:10px">✧</span>
-  <span class="sparkle" style="top:30%;left:45%;font-size:18px;opacity:0.45">✦</span>
-  <span class="sparkle" style="top:55%;left:15%;font-size:11px">♡</span>
-  <span class="sparkle" style="top:70%;left:70%;font-size:16px;opacity:0.5">✧</span>
-  <span class="sparkle" style="top:80%;left:35%;font-size:10px">♡</span>
-  <span class="sparkle" style="top:20%;left:60%;font-size:13px;opacity:0.55">✦</span>
-  <span class="sparkle" style="top:60%;left:88%;font-size:12px">✧</span>
-  <span class="sparkle" style="top:90%;left:55%;font-size:14px;opacity:0.45">♡</span>
-  <span class="sparkle" style="top:42%;left:5%;font-size:9px">✦</span>
-  <span class="sparkle" style="top:5%;left:50%;font-size:11px;opacity:0.5">✧</span>
-  <span class="sparkle" style="top:75%;left:25%;font-size:15px;opacity:0.4">✦</span>
-</div>
-
-<!-- Top Bar -->
-<div id="topbar">
-  <span id="topbar-title">© ivy zhao 2026</span>
-  <span id="topbar-tag">marketing &amp; comms &nbsp;|&nbsp; available april 2026</span>
-  <div id="topbar-btns" aria-hidden="true">
-    <div class="tb-btn">_</div>
-    <div class="tb-btn">□</div>
-    <div class="tb-btn">✕</div>
-  </div>
-</div>
-
-<!-- Mobile back button (inside #main area, shown only on mobile panel view) -->
-<div id="mobile-back" data-action="mobile-back">← back</div>
-
-<!-- Layout -->
-<div id="layout">
-
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <div id="sidebar-header">
-      <div id="sidebar-name">ivy zhao</div>
-      <div id="sidebar-sub">ivy.zhao.career@gmail.com</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Ivy Zhao, home"><span class="brand-mark" aria-hidden="true"></span>Ivy Zhao</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="about.html">About</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <div id="sidebar-nav">
-      <span class="nav-section-label">pinned</span>
+  </header>
 
-      <div class="nav-item" data-open-panel="hello" id="nav-hello">
-        <!-- Pixel heart icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="4" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="5" y="3" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
-          <rect x="7" y="2" width="2" height="2" rx="0.4" fill="#ffb8cc"/>
-          <rect x="9" y="2" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
-          <rect x="11" y="3" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="13" y="4" width="2" height="2" rx="0.4" fill="#c85070"/>
-          <rect x="3" y="6" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
-          <rect x="5" y="5" width="2" height="2" rx="0.4" fill="#ffb8cc"/>
-          <rect x="7" y="4" width="4" height="4" rx="0.4" fill="#ffd0de"/>
-          <rect x="11" y="5" width="2" height="2" rx="0.4" fill="#f4a8b8"/>
-          <rect x="13" y="6" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="3" y="8" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="5" y="7" width="8" height="4" rx="0.4" fill="#f4a8b8"/>
-          <rect x="13" y="8" width="2" height="2" rx="0.4" fill="#c85070"/>
-          <rect x="5" y="11" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="7" y="11" width="4" height="2" rx="0.4" fill="#f4a8b8"/>
-          <rect x="11" y="11" width="2" height="2" rx="0.4" fill="#c85070"/>
-          <rect x="7" y="13" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="9" y="13" width="2" height="2" rx="0.4" fill="#c85070"/>
-          <rect x="8" y="15" width="2" height="2" rx="0.4" fill="#e07090"/>
-        </svg>
-        <span class="nav-item-label">hello :)</span>
-      </div>
-
-      <div class="nav-item" data-open-panel="work">
-        <!-- Journal icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="1" width="11" height="16" rx="0.4" fill="#f4a8b8" opacity="0.8"/>
-          <rect x="13" y="1" width="3" height="4" rx="0.4" fill="#e07090"/>
-          <rect x="4" y="5" width="7" height="2" rx="0.4" fill="#e07090" opacity="0.7"/>
-          <rect x="4" y="8" width="6" height="2" rx="0.4" fill="#e07090" opacity="0.5"/>
-          <rect x="4" y="11" width="7" height="2" rx="0.4" fill="#e07090" opacity="0.5"/>
-          <rect x="4" y="14" width="5" height="2" rx="0.4" fill="#e07090" opacity="0.4"/>
-          <rect x="2" y="1" width="2" height="16" rx="0.4" fill="#e07090" opacity="0.5"/>
-        </svg>
-        <span class="nav-item-label">about me (work)</span>
-      </div>
-
-      <div class="nav-item" data-open-panel="personal">
-        <!-- Leaf icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="2" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="6" y="4" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="10" y="4" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="4" y="6" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="8" y="4" width="2" height="2" rx="0.4" fill="#9ade8a"/>
-          <rect x="12" y="6" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="4" y="8" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="6" y="6" width="2" height="2" rx="0.4" fill="#9ade8a"/>
-          <rect x="10" y="6" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="12" y="8" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="6" y="8" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="8" y="6" width="2" height="2" rx="0.4" fill="#9ade8a"/>
-          <rect x="10" y="8" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="6" y="10" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="8" y="8" width="2" height="2" rx="0.4" fill="#7aca7a"/>
-          <rect x="10" y="10" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="8" y="10" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="8" y="12" width="2" height="2" rx="0.4" fill="#8b6a3a"/>
-          <rect x="8" y="14" width="2" height="2" rx="0.4" fill="#8b6a3a"/>
-        </svg>
-        <span class="nav-item-label">about me (personal)</span>
-      </div>
-
-      <div class="nav-item" data-open-panel="projects">
-        <!-- Folder icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="5" width="4" height="2" rx="0.4" fill="#d8d0d4"/>
-          <rect x="6" y="5" width="2" height="2" rx="0.4" fill="#ede8ea"/>
-          <rect x="2" y="7" width="14" height="9" rx="0.4" fill="#ede8ea"/>
-          <rect x="2" y="7" width="14" height="2" rx="0.4" fill="#d8d0d4"/>
-          <rect x="14" y="9" width="2" height="7" rx="0.4" fill="#c8c0c4"/>
-          <rect x="2" y="14" width="14" height="2" rx="0.4" fill="#d8d0d4"/>
-        </svg>
-        <span class="nav-item-label">work &amp; projects</span>
-      </div>
-
-      <div class="nav-item" data-open-panel="now">
-        <!-- Heart strawberry icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="6" y="2" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="10" y="2" width="2" height="2" rx="0.4" fill="#5aaa6a"/>
-          <rect x="8" y="2" width="2" height="4" rx="0.4" fill="#5aaa6a"/>
-          <rect x="4" y="5" width="2" height="2" rx="0.4" fill="#f07070"/>
-          <rect x="12" y="5" width="2" height="2" rx="0.4" fill="#f07070"/>
-          <rect x="6" y="4" width="2" height="2" rx="0.4" fill="#e05050"/>
-          <rect x="10" y="4" width="2" height="2" rx="0.4" fill="#e05050"/>
-          <rect x="4" y="7" width="2" height="2" rx="0.4" fill="#e05050"/>
-          <rect x="12" y="7" width="2" height="2" rx="0.4" fill="#e05050"/>
-          <rect x="6" y="6" width="6" height="4" rx="0.4" fill="#f07070"/>
-          <rect x="7" y="6" width="2" height="2" rx="0.4" fill="#ffaaaa" opacity="0.8"/>
-          <rect x="6" y="10" width="2" height="2" rx="0.4" fill="#e05050"/>
-          <rect x="10" y="10" width="2" height="2" rx="0.4" fill="#e05050"/>
-          <rect x="8" y="10" width="2" height="2" rx="0.4" fill="#f07070"/>
-          <rect x="8" y="12" width="2" height="2" rx="0.4" fill="#e05050"/>
-        </svg>
-        <span class="nav-item-label">in the now</span>
-      </div>
-
-      <span class="nav-section-label" style="margin-top:4px">more</span>
-
-      <div class="nav-item" data-open-panel="resume">
-        <!-- Document icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="1" width="10" height="16" rx="0.4" fill="#ede8ea"/>
-          <rect x="11" y="1" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="13" y="3" width="0" height="0"/>
-          <rect x="11" y="3" width="2" height="2" rx="0.4" fill="#e07090" opacity="0.6"/>
-          <rect x="4" y="5" width="8" height="2" rx="0.4" fill="#c07090" opacity="0.8"/>
-          <rect x="4" y="8" width="7" height="2" rx="0.4" fill="#a09098" opacity="0.6"/>
-          <rect x="4" y="11" width="6" height="2" rx="0.4" fill="#a09098" opacity="0.5"/>
-          <rect x="4" y="14" width="4" height="2" rx="0.4" fill="#a09098" opacity="0.4"/>
-        </svg>
-        <span class="nav-item-label">resume</span>
-      </div>
-
-      <div class="nav-item" data-open-panel="contact">
-        <!-- Envelope icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="4" width="14" height="10" rx="0.4" fill="#f4a8b8"/>
-          <rect x="2" y="4" width="14" height="2" rx="0.4" fill="#e07090" opacity="0.5"/>
-          <rect x="2" y="12" width="14" height="2" rx="0.4" fill="#e07090" opacity="0.4"/>
-          <rect x="4" y="6" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="12" y="6" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="6" y="8" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="10" y="8" width="2" height="2" rx="0.4" fill="#e07090"/>
-          <rect x="8" y="10" width="2" height="2" rx="0.4" fill="#e07090"/>
-        </svg>
-        <span class="nav-item-label">contact</span>
-      </div>
-
-      <span class="nav-section-label" style="margin-top:4px">archive</span>
-
-      <div class="nav-item" data-action="toggle-archive" id="archive-toggle" aria-expanded="false" aria-controls="archive-dropdown">
-        <!-- Archive box icon -->
-        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="14" height="3" rx="0.4" fill="#c0b8bc"/>
-          <rect x="2" y="5" width="14" height="11" rx="0.4" fill="#d8d4d6"/>
-          <rect x="2" y="5" width="14" height="2" rx="0.4" fill="#a8a0a4"/>
-          <rect x="5" y="9" width="8" height="2" rx="0.4" fill="#c0b8bc"/>
-          <rect x="2" y="14" width="14" height="2" rx="0.4" fill="#a8a0a4"/>
-        </svg>
-        <span class="nav-item-label">now archive</span>
-        <span class="nav-arrow" id="archive-arrow">▶</span>
-      </div>
-      <div class="nav-dropdown-body" id="archive-dropdown">
-        <div class="nav-sub-item" data-open-panel="march2026">march 2026</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Main area -->
-  <div id="main">
-
-    <!-- Panel: hello :) -->
-    <div class="panel" id="panel-hello" data-title="hello :)">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-hello">
-        <span class="panel-title">hello :)</span>
-        <div class="panel-close" data-close-panel="hello">✕</div>
-      </div>
-      <div class="panel-body">
-        <img src="ivy-photo.png" alt="Ivy Zhao" class="profile-photo">
-        <div class="panel-heading panel-heading-large">ivy zhao</div>
-        <div class="panel-note-date">written march 2026</div>
-        <div class="panel-date panel-date-spaced">Marketing &amp; Communications &nbsp;|&nbsp; Content Operations &amp; Social Media &nbsp;|&nbsp; UW 2026</div>
-        <p class="body-copy-tight">Hi, I'm Ivy! I'm a Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them. Based in Markham, ON. Available full-time from April 2026.</p>
-      </div>
-      <div class="panel-resize" data-panel="hello">···</div>
-    </div>
-
-    <!-- Panel: about me (work) -->
-    <div class="panel" id="panel-work" data-title="about me (work version)">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-work">
-        <span class="panel-title">about me (work)</span>
-        <div class="panel-close" data-close-panel="work">✕</div>
-      </div>
-      <div class="panel-body">
-        <div class="panel-heading">about me (work)</div>
-        <div class="panel-note-date">last updated march 2026</div>
-        <p class="body-copy-compact">Communications grad from the University of Waterloo with a background in content production, publishing workflows, and cross-functional marketing. I like making things clear, well-timed, and actually useful for the people reading them.</p>
-
-        <div class="section-heading">currently:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>finishing my BA at Waterloo, exams done early April</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>based in Markham, ON — open to remote roles</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>looking for work in marketing, communications, or content</span></div>
-
-        <div class="section-heading">experience:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span><strong>Content Marketing Coordinator @ Digital Extremes (Warframe)</strong> — player-facing content across web, social, and in-game channels</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span><strong>HR Communications Co-op @ Toronto Police Service</strong> — internal comms, newsletters, onboarding materials, feedback tools</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span><strong>National Education Specialist @ Manulife</strong> — retirement education materials, large-scale system transitions, training documentation</span></div>
-
-        <hr class="dashed-divider">
-        <a href="Ivy%20Zhao%20Resume.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (general) ↗</a>
-        <a href="Ivy%20Zhao%20Resume%20GI.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (games) ↗</a>
-      </div>
-      <div class="panel-resize" data-panel="work">···</div>
-    </div>
-
-    <!-- Panel: about me (personal) -->
-    <div class="panel" id="panel-personal" data-title="about me (personal)">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-personal">
-        <span class="panel-title">about me (personal)</span>
-        <div class="panel-close" data-close-panel="personal">✕</div>
-      </div>
-      <div class="panel-body">
-        <div class="panel-heading">about me (personal)</div>
-        <div class="panel-note-date">written march 2026</div>
-        <div class="panel-date">hi, I'm Ivy! (or berry, if we met on discord)</div>
-
-        <div class="section-heading">games:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>957 hours in Warframe, which I also got to work on!</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>honourable mentions: Helldivers 2, BG3, Disco Elysium, Project Zomboid, Lethal Company, Sims, Spore</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>Disco Elysium deserved better</span></div>
-
-        <div class="section-heading">music:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>depends entirely on the day — somewhere between Laufey and late 90s kpop, with detours into vocaloid, mandopop, and Sabrina Carpenter</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>I have a playlist for my favourite eras and dedicated artist playlists too!</span></div>
-
-        <div class="section-heading">other things:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>AAPI and intersectional feminist advocacy: my family's Shanghai-to-Markham journey is why I'm here</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>Sanrio, stuffed animals, cats, and cute things generally</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>salmon sashimi and grapes with complete and unwavering devotion</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>reading when the right thing finds me: bell hooks, game lore deep dives, the occasional isekai romance novel</span></div>
-      </div>
-      <div class="panel-resize" data-panel="personal">···</div>
-    </div>
-
-    <!-- Panel: work & projects -->
-    <div class="panel" id="panel-projects" data-title="work &amp; projects">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-projects">
-        <span class="panel-title">work &amp; projects</span>
-        <div class="panel-close" data-close-panel="projects">✕</div>
-      </div>
-      <div class="panel-body">
-        <div class="panel-heading">work &amp; projects</div>
-        <div class="panel-note-date">last updated march 2026</div>
-        <p class="panel-hint" style="margin-bottom:14px">doing stuff and helping people is fun</p>
-
-        <div class="section-heading">web content @ digital extremes (warframe)</div>
-        <p class="work-section-intro">Player-facing content written and published on warframe.com during my co-op term (June–August 2025). Coordinated across development, art, community, and marketing teams to hit tight release windows.</p>
-
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Countdown to TennoCon 2025 — multi-channel hype piece coordinating Twitch Drop logistics across three event days, community artist credits, and partner giveaways for a global playerbase</span></div>
-          <div class="work-entry-link"><a href="https://www.warframe.com/en/news/countdown-to-tennocon-2025-en" target="_blank" rel="noopener">↗ warframe.com</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>TennoGen Isleweaver Available Now — community cosmetics spotlight cataloguing items across multiple creators with individual artist credits and storefront descriptions</span></div>
-          <div class="work-entry-link"><a href="https://www.warframe.com/en/news/tennogen-isleweaver-coming-soon" target="_blank" rel="noopener">↗ warframe.com</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Dog Days 2025 — seasonal event launch post bridging marketing and game comms: balance change communication, new reward breakdowns, accessibility improvements, and community artist credits</span></div>
-          <div class="work-entry-link"><a href="https://www.warframe.com/en/news/dog-days-2025" target="_blank" rel="noopener">↗ warframe.com</a></div>
-        </div>
-
-        <div class="section-heading">social &amp; game capture @ digital extremes (warframe)</div>
-        <p class="work-section-intro">Game capture and in-game content creation for @playwarframe on Instagram and TikTok (June–August 2025). Involved in shooting, staging, and producing short-form video and photo content.</p>
-
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Fridgeframe — 444K views on Instagram · 258.3K on TikTok</span></div>
-          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DMS9J63MTum/" target="_blank" rel="noopener">↗ instagram</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Qorvex x Plague Star — 351K views on Instagram · 236.5K on TikTok (released after my term ended, but this one was mine 🩷)</span></div>
-          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DOHG6pqgtnk/" target="_blank" rel="noopener">↗ instagram</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Merulina Prime — 210K views on Instagram · 49.8K on TikTok</span></div>
-          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DKc8d_OCHtd/" target="_blank" rel="noopener">↗ instagram</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Operator Hairstyles (Flare, Minerva, Velimir, Kaya) — my operator was used! · 143K views on Instagram · 21K on TikTok</span></div>
-          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DLkir2LiGXC/" target="_blank" rel="noopener">↗ instagram</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>TennoCon 2025 VA Collab — 155K views on Instagram · 103.1K on TikTok</span></div>
-          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DMQPmvoCVpI/" target="_blank" rel="noopener">↗ instagram</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Qorvex x Pride Month — 85.2K views on Instagram · 31.4K on TikTok · gained real experience moderating comments sections on sensitive content</span></div>
-          <div class="work-entry-link"><a href="https://www.instagram.com/reel/DK2k_ScikGY/" target="_blank" rel="noopener">↗ instagram</a></div>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>Valkyr Heirloom (TikTok exclusive) — 100.9K views on TikTok · no Instagram link available</span></div>
-          <video class="work-video" src="valkyr-heirloom.mp4" controls></video>
-        </div>
-        <div class="work-entry">
-          <div class="bullet"><span class="bullet-dash">–</span><span>TennoCon 2025 Writing on the Wall — Instagram Story; that's my hand 🙂</span></div>
-          <video class="work-video" src="tennocon-writing-on-wall.mp4" controls></video>
-        </div>
-
-        <div class="section-heading">other</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span><a href="https://ivyzhao.ca" target="_blank" rel="noopener" style="color:inherit">ivyzhao.ca</a> — designed and built from scratch (+ Claude Code)</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span><a href="https://ivyzhao.ca/job-application-tracker/" target="_blank" rel="noopener" style="color:inherit">ivyzhao.ca/job-application-tracker/</a> — a job application tracking &amp; visualisation page designed and built from scratch (+ Claude Code)</span></div>
-      </div>
-      <div class="panel-resize" data-panel="projects">···</div>
-    </div>
-
-    <!-- Panel: in the now -->
-    <div class="panel" id="panel-now" data-title="in the now">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-now">
-        <span class="panel-title">in the now</span>
-        <div class="panel-close" data-close-panel="now">✕</div>
-      </div>
-      <div class="panel-body">
-        <div class="pixel-tag">/ now</div>
-        <div class="panel-heading">in the now...</div>
-        <div class="panel-note-date">last updated march 2026</div>
-
-        <div class="section-heading">where I'm at:</div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>finished my BA at Waterloo in April</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>job searching (if you're hiring, hi 🍑)</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>listening to Karencici on loop</span></div>
-        <div class="bullet"><span class="bullet-dash">–</span><span>taking life day by day</span></div>
-
-        <hr class="dashed-divider">
-        <p class="panel-hint">inspired by Derek Sivers and the <a href="https://nownownow.com/about" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:underline dotted;">/now movement</a></p>
-      </div>
-      <div class="panel-resize" data-panel="now">···</div>
-    </div>
-
-    <!-- Panel: resume -->
-    <div class="panel" id="panel-resume" data-title="resume">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-resume">
-        <span class="panel-title">resume</span>
-        <div class="panel-close" data-close-panel="resume">✕</div>
-      </div>
-      <div class="panel-body">
-        <div class="panel-heading">resume</div>
-        <div class="panel-note-date">updated march 2026</div>
-        <div class="panel-link-group">
-          <a href="Ivy%20Zhao%20Resume.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (general) ↗</a>
-          <a href="Ivy%20Zhao%20Resume%20GI.pdf" target="_blank" rel="noopener" class="pixel-btn">resume (games) ↗</a>
+  <main id="main" class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div data-reveal>
+        <p class="eyebrow">Operations &amp; communications</p>
+        <h1 id="hero-title">I’m Ivy. I help teams keep track of the moving pieces.</h1>
+        <p class="hero-copy">My background spans claims payments, vendor coordination, content delivery, and internal communications. I’m usually the person <strong>recording what matters, following issues through, and making the next step easier to find.</strong></p>
+        <div class="button-row">
+          <a class="button" href="experience.html">View experience <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="resume.html">Resume</a>
         </div>
       </div>
-      <div class="panel-resize" data-panel="resume">···</div>
-    </div>
+      <aside class="hero-aside" data-reveal>
+        <div class="portrait-frame"><img src="ivy-photo.png" alt="Ivy Zhao in her graduation gown holding a bouquet" width="1122" height="1402"></div>
+        <div class="aside-note"><span>Markham, Ontario</span><span>Currently remote</span></div>
+      </aside>
+    </section>
 
-    <!-- Panel: contact -->
-    <div class="panel" id="panel-contact" data-title="contact">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-contact">
-        <span class="panel-title">contact</span>
-        <div class="panel-close" data-close-panel="contact">✕</div>
-      </div>
-      <div class="panel-body">
-        <div class="panel-heading">say hi</div>
-        <div class="panel-note-date">written march 2026</div>
-        <div class="panel-date">always happy to chat</div>
-        <div class="panel-link-group">
-          <a href="mailto:ivy.zhao.career@gmail.com" class="pixel-btn">email ↗</a>
-          <a href="https://www.linkedin.com/in/ivyzhao02" target="_blank" rel="noopener" class="pixel-btn">linkedin ↗</a>
-        </div>
-      </div>
-      <div class="panel-resize" data-panel="contact">···</div>
-    </div>
+    <section class="proof-strip" aria-label="Professional focus" data-reveal>
+      <div class="proof-item"><span class="proof-number">01</span><p>Claims &amp; payment workflows</p></div>
+      <div class="proof-item"><span class="proof-number">02</span><p>Notes, references &amp; handoffs</p></div>
+      <div class="proof-item"><span class="proof-number">03</span><p>Cross-team coordination</p></div>
+    </section>
 
-    <!-- Panel: march 2026 -->
-    <div class="panel" id="panel-march2026" data-title="now archive — march 2026">
-      <div class="pixel-corner-bl"></div><div class="pixel-corner-br"></div>
-      <div class="panel-titlebar" id="titlebar-march2026">
-        <span class="panel-title">now archive — march 2026</span>
-        <div class="panel-close" data-close-panel="march2026">✕</div>
+    <section class="section" aria-labelledby="experience-heading">
+      <div class="section-head" data-reveal><p class="section-kicker">Selected experience</p><h2 id="experience-heading">Where I’ve worked.</h2></div>
+      <div class="experience-list" data-reveal>
+        <article class="experience-row"><div><h3>Xodus Travel Services</h3><p>Billing Specialist</p></div><p>Claims payments, vendor issues, failed-payment investigations, recurring batches, and month-end support.</p><p class="experience-date">2026 - Present</p></article>
+        <article class="experience-row"><div><h3>Digital Extremes</h3><p>Content Marketing Coordinator</p></div><p>Publishing schedules, approvals, revisions, and workload tracking across marketing, design, and development.</p><p class="experience-date">2025</p></article>
+        <article class="experience-row"><div><h3>Toronto Police Service</h3><p>HR Communications Student</p></div><p>An organization-wide communications audit, leadership recommendations, updated processes, and employee resources.</p><p class="experience-date">2025</p></article>
+        <article class="experience-row"><div><h3>Manulife</h3><p>National Education Specialist</p></div><p>CRM campaigns, PowerBI reporting, automated data connections, training guides, and client transitions.</p><p class="experience-date">2023</p></article>
       </div>
-      <div class="panel-body">
-        <div class="pixel-tag">/ now · march 2026</div>
-        <div class="panel-heading">march 2026</div>
-        <div class="panel-note-date">written march 2026</div>
-        <p class="panel-hint">archive entry — coming soon</p>
+      <a class="text-link" href="experience.html">Read the full experience timeline</a>
+    </section>
+
+    <section class="section" aria-labelledby="capabilities-heading">
+      <div class="section-head" data-reveal><p class="section-kicker">In practice</p><h2 id="capabilities-heading">What I tend to pay attention to.</h2></div>
+      <div class="capability-grid" data-reveal>
+        <article class="capability"><span>01 / Track</span><h3>Keeping the details visible</h3><p>I keep dependencies, approvals, timelines, and exceptions in view so people know what needs attention.</p></article>
+        <article class="capability"><span>02 / Record</span><h3>Leaving a useful trail</h3><p>I capture procedures, decisions, and context in references people can return to later.</p></article>
+        <article class="capability"><span>03 / Follow through</span><h3>Staying with an issue</h3><p>I ask the next question, involve the right people, and keep an item moving until it is resolved.</p></article>
+        <article class="capability"><span>04 / Improve</span><h3>Making repeat tasks easier</h3><p>I notice recurring friction and make focused changes using tools the team can maintain.</p></article>
       </div>
-      <div class="panel-resize" data-panel="march2026">···</div>
-    </div>
+    </section>
 
-  </div><!-- /#main -->
-</div><!-- /#layout -->
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="section-head" data-reveal><p class="section-kicker">Selected projects</p><h2 id="projects-heading">A few things I’ve built or improved.</h2></div>
+      <div class="project-grid" data-reveal>
+        <article class="project-card"><span class="status">Documented framework</span><h3>Professional Operating System</h3><p>A private reference that keeps positioning, project priorities, decision-making, and career materials consistent over time.</p></article>
+        <article class="project-card"><span class="status">Implemented workflow</span><h3>Workload visibility tracker</h3><p>A shared tracker created at Digital Extremes to improve visibility into assignments, edit readiness, and approval status across a remote team.</p></article>
+      </div>
+      <a class="text-link" href="projects.html">Explore projects and case studies</a>
+    </section>
 
-<script src="script.js"></script>
+    <section class="cta-band" data-reveal>
+      <h2>Thanks for taking a look.</h2>
+      <div><p>My resume has the full details. You’re also welcome to email me about an opportunity, a project, or a question about my experience.</p><a class="button" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer-wrap"><div class="site-footer"><span>© <span data-year></span> Ivy Zhao · Ontario, Canada</span><div class="footer-links"><a href="mailto:ivy.zhao.career@gmail.com">Email</a><a href="https://www.linkedin.com/in/ivyzhao02" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="resume.html">Resume</a></div></div></footer>
 </body>
 </html>
