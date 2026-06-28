@@ -235,14 +235,14 @@ h3 {
 h1 {
   max-width: 850px;
   margin-bottom: 28px;
-  font-size: clamp(3.35rem, 7.3vw, 7.1rem);
+  font-size: clamp(3.35rem, 5.8vw, 5.8rem);
   letter-spacing: -0.055em;
 }
 
 .page-title {
   max-width: 900px;
   margin-bottom: 28px;
-  font-size: clamp(3.2rem, 6.5vw, 6.4rem);
+  font-size: clamp(3.2rem, 5.4vw, 5.3rem);
   letter-spacing: -0.05em;
 }
 
