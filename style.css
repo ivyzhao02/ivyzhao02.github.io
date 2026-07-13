@@ -587,6 +587,29 @@ h1 {
   font: 500 clamp(1.45rem, 2.5vw, 2rem)/1.4 var(--serif);
 }
 
+.case-note {
+  padding-left: 18px;
+  border-left: 2px solid var(--blush);
+}
+
+.compact-list {
+  max-width: 760px;
+  margin-top: 26px;
+  margin-bottom: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.compact-list span {
+  padding: 8px 11px;
+  border: 1px solid #c5d198;
+  background: rgba(220, 227, 186, 0.52);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
 .principle-list {
   margin-top: 42px;
   border-top: 1px solid var(--line);
@@ -1079,6 +1102,11 @@ h1 {
 
   .page-title {
     font-size: clamp(2.9rem, 15vw, 4.3rem);
+  }
+
+  .case-header .page-title {
+    font-size: clamp(2.45rem, 10.4vw, 3.1rem);
+    letter-spacing: -0.04em;
   }
 
   .hero-aside {
