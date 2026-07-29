@@ -502,6 +502,10 @@ h1 {
   gap: clamp(30px, 6vw, 90px);
 }
 
+.project-card.community-featured {
+  background: #edf2df;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -820,6 +824,51 @@ h1 {
   font-size: 0.8rem;
   font-weight: 600;
   text-decoration-color: var(--blush);
+}
+
+.metric-grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.metric {
+  min-width: 0;
+  padding: clamp(24px, 3.5vw, 40px);
+  background: var(--accent-pale);
+}
+
+.metric:nth-child(even) {
+  background: #f5f8ec;
+}
+
+.metric dt {
+  margin-bottom: 30px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.metric dd {
+  margin: 0;
+}
+
+.metric-value {
+  color: var(--ink);
+  font: 500 clamp(1.65rem, 2.8vw, 2.35rem)/1.05 var(--serif);
+  letter-spacing: -0.025em;
+}
+
+.metric .metric-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .coming-soon {
@@ -1162,6 +1211,10 @@ h1 {
   .artifact-grid {
     grid-template-columns: 1fr;
   }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -1216,6 +1269,10 @@ h1 {
 
   .future-cases,
   .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-grid {
     grid-template-columns: 1fr;
   }
 
