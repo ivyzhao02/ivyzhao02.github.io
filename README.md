@@ -7,7 +7,10 @@ Professional portfolio for Ivy Zhao, built as a dependency-free static site and 
 - `index.html` - positioning and overview
 - `about.html` - professional approach and working principles
 - `experience.html` - detailed experience timeline
-- `projects.html` - sanitized systems and process case studies
+- `projects.html` - selected work and case-study index
+- `warframe-publishing-communications.html` - Warframe publishing and communications case study
+- `community-leadership.html` - BlightFall and earlier community-leadership case study
+- `blightfall-operations.html` - BlightFall operations and product-infrastructure case study
 - `resume.html` - prominent resume access
 - `contact.html` - contact links
 - `style.css` - shared design system and responsive layouts

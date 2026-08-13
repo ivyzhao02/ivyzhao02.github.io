@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
 
 :root {
   --paper: #f8faf3;
@@ -506,6 +506,10 @@ h1 {
   background: #edf2df;
 }
 
+.project-card.operations-featured {
+  background: #e5edd0;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -526,6 +530,10 @@ h1 {
 .text-link:hover::after {
   color: var(--blush);
   transform: translate(3px, -3px);
+}
+
+.role-body > .text-link + .text-link {
+  margin-left: 26px;
 }
 
 .cta-band {
@@ -1218,6 +1226,10 @@ h1 {
 }
 
 @media (max-width: 640px) {
+  .role-body > .text-link + .text-link {
+    margin-left: 0;
+  }
+
   .nav-wrap,
   .site-footer,
   .page-shell {

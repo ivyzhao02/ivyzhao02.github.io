@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A BlightFall case study by Ivy Zhao covering product strategy, operations design, information governance, reporting, acceptance testing, and AI-assisted delivery.">
+  <meta name="theme-color" content="#f8faf3">
+  <link rel="canonical" href="https://ivyzhao.ca/blightfall-operations.html">
+  <meta property="og:title" content="BlightFall Operations &amp; Product Infrastructure | Ivy Zhao">
+  <meta property="og:description" content="Repository-backed project operations, controlled changes, portable reporting, privacy boundaries, and AI-assisted delivery for a distributed Roblox team.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ivyzhao.ca/blightfall-operations.html">
+  <meta property="og:image" content="https://ivyzhao.ca/assets/ivyzhao-social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ivyzhao.ca - games communications, community, and content">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BlightFall Operations &amp; Product Infrastructure | Ivy Zhao">
+  <meta name="twitter:description" content="Operations design, information governance, reporting, QA, and AI-assisted delivery for an ongoing private Roblox project.">
+  <meta name="twitter:image" content="https://ivyzhao.ca/assets/ivyzhao-social-preview.png">
+  <title>BlightFall Operations &amp; Product Infrastructure | Ivy Zhao</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html" aria-label="Ivy Zhao, home"><span class="brand-mark" aria-hidden="true"></span>Ivy Zhao</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="about.html">About</a><a href="experience.html">Experience</a><a href="projects.html" aria-current="page">Work</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a></nav></div></header>
+
+  <main id="main" class="page-shell">
+    <header class="page-header case-header" data-reveal>
+      <p class="eyebrow">Operations and product infrastructure case study</p>
+      <h1 class="page-title">BlightFall Operations &amp; Product Infrastructure.</h1>
+      <p class="page-intro">I designed and operationalized a <strong>repository-backed project operations system for a distributed Roblox development team</strong>, replacing fragmented workspace processes with structured records, controlled changes, privacy boundaries, portable reporting, and AI-assisted implementation workflows.</p>
+      <div class="tags"><span class="tag">2026 - Present</span><span class="tag">Product strategy</span><span class="tag">Operations design</span><span class="tag">Information governance</span><span class="tag">Acceptance testing</span></div>
+    </header>
+
+    <dl class="metric-grid" aria-label="BlightFall operations snapshot" data-reveal>
+      <div class="metric"><dt>Structured records</dt><dd class="metric-value">72</dd><dd class="metric-note">currently validated in the Ops Hub</dd></div>
+      <div class="metric"><dt>Migration review</dt><dd class="metric-value">168</dd><dd class="metric-note">Notion export entries preserved and reviewed</dd></div>
+      <div class="metric"><dt>Reporting contexts</dt><dd class="metric-value">5</dd><dd class="metric-note">internal, leadership, team, Discord, and external</dd></div>
+      <div class="metric"><dt>Project status</dt><dd class="metric-value">Ongoing</dd><dd class="metric-note">private Roblox game project</dd></div>
+    </dl>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Context and role</p>
+      <div class="prose"><h2>Building continuity around the game.</h2><p class="lead">My role combines operations leadership, product thinking, systems design, implementation direction, documentation, stakeholder coordination, and acceptance testing.</p><p>BlightFall is an ongoing private Roblox project with no publicly announced release date. As the team&rsquo;s operational needs grew, I led a staged move away from subscription-dependent Notion infrastructure toward a maintainable system the project could own, validate, and recover.</p><p>I used ChatGPT and Codex as implementation collaborators. I led the requirements, architecture, review gates, testing, and operational adoption rather than presenting the underlying software as code I wrote alone.</p></div>
+    </section>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Migration strategy</p>
+      <div class="prose"><h2>Preserve first, retire carefully.</h2><p>I evaluated the existing workspace, classified what needed to be retained, and organized the migration into approval-gated work packages. Each package included testing, rollback, continuity, and retirement criteria so the team could move deliberately without losing useful project history.</p><p>The review preserved and assessed a 168-entry Notion export. Notion retirement remains staged: the new system must continue to prove parity and recoverability before older infrastructure is permanently retired.</p></div>
+    </section>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Source of truth</p>
+      <div class="prose"><h2>Connecting the tools without confusing their roles.</h2><p>I designed the source-of-truth architecture across the game repository, Ops Hub, Dev Tracker, Google Drive, ChatGPT Work, development tools, and planned Discord integrations. The model gives each system a clear purpose while keeping decisions, ownership, dependencies, evidence references, and follow-through traceable.</p><p>The internal Ops Hub now validates 72 structured records covering decisions, actions, workstreams, risks, meetings, people, resources, ownership, relationships, and next steps.</p><div class="compact-list"><span>Decisions &amp; actions</span><span>Workstreams &amp; risks</span><span>Ownership &amp; dependencies</span><span>Meetings &amp; follow-through</span><span>Resources &amp; evidence references</span></div></div>
+    </section>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Controlled changes</p>
+      <div class="prose"><h2>Making operational updates reviewable and recoverable.</h2><p>I directed the introduction of preview/apply transactions, validation, revision checks, audit history, device attribution, privacy checks, and recovery procedures. Changes can be reviewed before they are applied, conflicting revisions are caught, and the resulting history remains understandable later.</p><p>The system separates safe repository records from restricted evidence, credentials, financial material, agreements, and identity information stored outside Git. Automated privacy, transaction, relationship, and regression checks reinforce those boundaries.</p></div>
+    </section>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Reporting and handoffs</p>
+      <div class="prose"><h2>Turning project records into useful views.</h2><p>I directed and tested audience-aware reporting for internal, leadership, team-facing, Discord-ready, and external-safe use. Outputs include formatted previews, Markdown and PDF exports, concise Discord summaries, and weekly digests, with external reporting designed to fail closed when material is not safe to share.</p><p>I also designed a structured ChatGPT Work-to-Codex handoff so strategy conversations can become traceable, reviewable implementation requests without exposing the repository through a public write API.</p></div>
+    </section>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Testing and readiness</p>
+      <div class="prose"><h2>Proving the system before depending on it.</h2><p>I coordinated acceptance testing and stakeholder review across information routing, meeting workflows, report parity, privacy boundaries, continuity rehearsals, and recovery backups. Recovery materials were packaged, checksum-verified, downloaded back for integrity verification, and stored under restricted access.</p><p>I also directed a least-privilege, review-gated Discord bridge for future operational intake, developer accountability, reminders, and Dev Tracker updates. That integration remains continuing work and is not represented as a live production bot.</p></div>
+    </section>
+
+    <section class="split-layout section" data-reveal>
+      <p class="sticky-label">Project foundation</p>
+      <div class="prose"><h2>Preparing for a project that can grow responsibly.</h2><p>Alongside the internal operations work, I established the official <strong>blightfall.ca</strong> domain, business-email foundation, account-recovery planning, and a multi-platform social presence.</p><p>Together, these systems replace ad-hoc operational knowledge with a maintainable foundation for project continuity, institutional memory, accountability, and future company readiness.</p></div>
+    </section>
+
+    <section class="coming-soon" data-reveal><h2>What this demonstrates</h2><div><p>Experience that transfers directly to:</p><ul class="future-cases"><li>Product operations</li><li>Production coordination</li><li>Systems and workflow design</li><li>Information governance</li><li>Documentation and reporting</li><li>Acceptance testing and QA</li><li>Stakeholder coordination</li><li>AI-assisted delivery</li></ul></div></section>
+
+    <section class="cta-band" data-reveal><h2>Operations and community, together.</h2><div><p>The companion community case study covers Discord leadership, moderation, live developer events, player feedback, and member support for the same project.</p><a class="button" href="community-leadership.html">View community work <span aria-hidden="true">&#8599;</span></a></div></section>
+  </main>
+
+  <footer class="site-footer-wrap"><div class="site-footer"><span>&copy; <span data-year></span> Ivy Zhao &middot; Ontario, Canada</span><div class="footer-links"><a href="mailto:ivy.zhao.career@gmail.com">Email</a><a href="https://www.linkedin.com/in/ivyzhao02" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="resume.html">Resume</a></div></div></footer>
+</body>
+</html>
