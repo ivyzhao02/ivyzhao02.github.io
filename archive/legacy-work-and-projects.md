@@ -27,5 +27,5 @@ Game capture and in-game content creation for @playwarframe on Instagram and Tik
 
 ## Other Archived Projects
 
-- [ivyzhao.ca](https://ivyzhao.ca) - Designed and built from scratch, with assistance from Claude Code. This description refers to the site's earlier version.
-- [Job application tracker](https://ivyzhao.ca/job-application-tracker/) - A job-application tracking and visualization page designed and built from scratch, with assistance from Claude Code. This archived route may no longer be live.
+- [ivyzhao.ca](https://ivyzhao.ca) - Designed and built from scratch, with AI coding assistance. This description refers to the site's earlier version.
+- [Job application tracker](https://ivyzhao.ca/job-application-tracker/) - A job-application tracking and visualization page designed and built from scratch, with AI coding assistance. This archived route may no longer be live.

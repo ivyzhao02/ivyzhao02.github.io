@@ -899,6 +899,36 @@ h1 {
   color: var(--muted);
 }
 
+.changelog-list {
+  border-top: 1px solid var(--line);
+}
+
+.changelog-entry {
+  padding: clamp(30px, 5vw, 56px) 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 0.45fr 1.55fr;
+  gap: clamp(32px, 7vw, 100px);
+}
+
+.changelog-entry time {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.changelog-entry h2 {
+  margin-bottom: 12px;
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+}
+
+.changelog-entry p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
 .future-cases {
   margin: 24px 0 0;
   padding: 0;
@@ -1193,6 +1223,7 @@ h1 {
   .section-head,
   .split-layout,
   .role,
+  .changelog-entry,
   .resume-panel,
   .contact-layout,
   .cta-band {

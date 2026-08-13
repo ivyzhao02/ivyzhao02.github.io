@@ -13,6 +13,7 @@ Professional portfolio for Ivy Zhao, built as a dependency-free static site and 
 - `blightfall-operations.html` - BlightFall operations and product-infrastructure case study
 - `resume.html` - prominent resume access
 - `contact.html` - contact links
+- `changelog.html` - major public content milestones
 - `style.css` - shared design system and responsive layouts
 - `script.js` - mobile navigation, current year, and reveal behavior
 - `assets/ivy-zhao-resume.pdf` - current public resume PDF
