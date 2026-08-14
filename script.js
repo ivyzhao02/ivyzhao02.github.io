@@ -32,6 +32,19 @@ document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
+document.querySelectorAll(".video-poster").forEach((button) => {
+  button.addEventListener("click", () => {
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?autoplay=1`;
+    iframe.title = button.dataset.videoTitle;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.allowFullscreen = true;
+    button.replaceWith(iframe);
+    iframe.focus();
+  });
+});
+
 const revealItems = document.querySelectorAll("[data-reveal]");
 
 if ("IntersectionObserver" in window) {
