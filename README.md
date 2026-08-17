@@ -18,11 +18,12 @@ Professional portfolio for Ivy Zhao, built as a dependency-free static site and 
 - `script.js` - mobile navigation, current year, and reveal behavior
 - `assets/ivy-zhao-resume.pdf` - current public resume PDF
 - `assets/ivy-zhao-resume-page-1.png` - generated first-page resume preview
+- `assets/ivy-zhao-resume-page-1.webp` - optimized first-page resume preview served by the site
 - `archive/` - retired site assets and the legacy games/content portfolio reference
 
 ## Updating the resume
 
-Replace `assets/ivy-zhao-resume.pdf` with the new PDF using the same filename. Also regenerate `assets/ivy-zhao-resume-page-1.png` and update the date shown on `resume.html`.
+Replace `assets/ivy-zhao-resume.pdf` with the new PDF using the same filename. Also regenerate both first-page preview formats and update the date shown on `resume.html`.
 
 ## Local preview
 
