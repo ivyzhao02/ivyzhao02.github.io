@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A BlightFall case study by Ivy Zhao covering product strategy, operations design, information governance, reporting, acceptance testing, and AI-assisted delivery.">
+  <meta name="description" content="A BlightFall case study by Ivy Zhao covering product strategy, project operations, reporting, implementation direction, acceptance testing, and AI-assisted delivery.">
   <meta name="theme-color" content="#f8faf3">
   <link rel="canonical" href="https://ivyzhao.ca/blightfall-operations.html">
   <meta property="og:title" content="BlightFall Operations &amp; Product Infrastructure | Ivy Zhao">
-  <meta property="og:description" content="Repository-backed project operations, controlled changes, portable reporting, privacy safeguards, and AI-assisted delivery for a distributed Roblox team.">
+  <meta property="og:description" content="Repository-backed project operations, controlled changes, portable reporting, and AI-assisted delivery for a distributed Roblox team.">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ivy Zhao">
+  <meta property="og:locale" content="en_CA">
   <meta property="og:url" content="https://ivyzhao.ca/blightfall-operations.html">
   <meta property="og:image" content="https://ivyzhao.ca/assets/ivyzhao-social-preview.png">
   <meta property="og:image:width" content="1200">
@@ -18,8 +20,13 @@
   <meta name="twitter:title" content="BlightFall Operations &amp; Product Infrastructure | Ivy Zhao">
   <meta name="twitter:description" content="Operations design, information governance, reporting, QA, and AI-assisted delivery for an ongoing private Roblox project.">
   <meta name="twitter:image" content="https://ivyzhao.ca/assets/ivyzhao-social-preview.png">
+  <meta name="twitter:image:alt" content="ivyzhao.ca - games communications, community, and content">
   <title>BlightFall Operations &amp; Product Infrastructure | Ivy Zhao</title>
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -31,8 +38,8 @@
     <header class="page-header case-header" data-reveal>
       <p class="eyebrow">Operations and product infrastructure case study</p>
       <h1 class="page-title">BlightFall Operations &amp; Product Infrastructure.</h1>
-    <p class="page-intro">I designed and operationalized a <strong>repository-backed project operations system for a distributed Roblox development team</strong>, replacing fragmented workspace processes with structured records, controlled changes, privacy safeguards, portable reporting, and AI-assisted implementation workflows.</p>
-      <div class="tags"><span class="tag">2026 - Present</span><span class="tag">Product strategy</span><span class="tag">Operations design</span><span class="tag">Information governance</span><span class="tag">Acceptance testing</span></div>
+      <p class="page-intro">As BlightFall&rsquo;s <strong>Community &amp; Operations Lead</strong>, I designed and operationalized a repository-backed project system for a distributed Roblox development team, replacing scattered workspace practices with structured records, controlled changes, portable reporting, and AI-assisted implementation workflows.</p>
+      <div class="tags"><span class="tag">2026 - Present</span><span class="tag">Community &amp; Operations Lead</span><span class="tag">Product strategy</span><span class="tag">Operations design</span><span class="tag">Acceptance testing</span></div>
     </header>
 
     <dl class="metric-grid" aria-label="BlightFall operations snapshot" data-reveal>
@@ -42,9 +49,20 @@
       <div class="metric"><dt>Project status</dt><dd class="metric-value">Ongoing</dd><dd class="metric-note">private Roblox game project</dd></div>
     </dl>
 
+    <figure class="case-visual operations-flow" aria-labelledby="operations-flow-title" data-reveal>
+      <div class="case-visual-heading"><p class="section-kicker">At a glance</p><h2 id="operations-flow-title">A clearer route from project input to follow-through.</h2></div>
+      <div class="case-flow" role="list">
+        <div class="flow-step" role="listitem"><span>01</span><h3>Capture</h3><p>Decisions, actions, risks, meetings, resources, and ownership.</p></div>
+        <div class="flow-step" role="listitem"><span>02</span><h3>Review</h3><p>Proposed changes are checked before they become shared records.</p></div>
+        <div class="flow-step" role="listitem"><span>03</span><h3>Translate</h3><p>Project information becomes useful views for different audiences.</p></div>
+        <div class="flow-step" role="listitem"><span>04</span><h3>Continue</h3><p>Owners, dependencies, next steps, and recovery material stay traceable.</p></div>
+      </div>
+      <figcaption>I led the requirements, architecture, implementation direction, testing, and adoption of the system across the team.</figcaption>
+    </figure>
+
     <section class="split-layout section" data-reveal>
       <p class="sticky-label">Context and role</p>
-      <div class="prose"><h2>Building continuity around the game.</h2><p class="lead">My role combines operations leadership, product thinking, systems design, implementation direction, documentation, stakeholder coordination, and acceptance testing.</p><p>BlightFall is an ongoing private Roblox project in development. As the team&rsquo;s operational needs grew, I led a staged move away from subscription-dependent Notion infrastructure toward a maintainable system the project could own, validate, and recover.</p><p>Generative AI and AI coding assistants supported implementation while I led the requirements, architecture, review gates, testing, and operational adoption.</p></div>
+      <div class="prose"><h2>Building continuity around the game.</h2><p class="lead">My role combines operations leadership, product thinking, systems design, implementation direction, documentation, stakeholder coordination, and acceptance testing.</p><p>BlightFall is an ongoing Roblox project in development. As the team&rsquo;s operational needs grew, I led a staged move away from subscription-dependent Notion infrastructure toward a maintainable system the project could own, validate, and recover.</p></div>
     </section>
 
     <section class="split-layout section" data-reveal>
@@ -59,17 +77,17 @@
 
     <section class="split-layout section" data-reveal>
       <p class="sticky-label">Controlled changes</p>
-      <div class="prose"><h2>Making operational updates reviewable and recoverable.</h2><p>I directed the introduction of preview/apply transactions, validation, revision checks, audit history, device attribution, privacy checks, and recovery procedures. Changes can be reviewed before they are applied, conflicting revisions are caught, and the resulting history remains understandable later.</p><p>The system separates safe repository records from restricted evidence, credentials, financial material, agreements, and identity information stored outside Git. Automated privacy, transaction, relationship, and regression checks reinforce those safeguards.</p></div>
+      <div class="prose"><h2>Making operational updates reviewable and recoverable.</h2><p>I directed the introduction of preview-and-apply transactions, validation, revision checks, audit history, and recovery procedures. Changes can be checked before they are applied, conflicting revisions are caught, and the resulting history remains understandable later.</p><p>Automated transaction, relationship, privacy, and regression checks help protect the quality of the shared records as the system evolves.</p></div>
     </section>
 
     <section class="split-layout section" data-reveal>
       <p class="sticky-label">Reporting and handoffs</p>
-      <div class="prose"><h2>Turning project records into useful views.</h2><p>I directed and tested audience-aware reporting for internal, leadership, team-facing, Discord-ready, and external-safe use. Outputs include formatted previews, Markdown and PDF exports, concise Discord summaries, and weekly digests, with external reporting designed to fail closed when material is not safe to share.</p><p>I also designed a structured AI planning-to-implementation handoff that turns strategy conversations into traceable, reviewable development requests while keeping repository access private and review-gated.</p></div>
+      <div class="prose"><h2>Turning project records into useful views.</h2><p>I directed and tested audience-aware reporting for internal, leadership, team-facing, Discord-ready, and external use. Outputs include formatted previews, Markdown and PDF exports, concise Discord summaries, and weekly digests.</p><p>I also designed a structured AI-assisted handoff that turns planning conversations into traceable, reviewable implementation requests.</p></div>
     </section>
 
     <section class="split-layout section" data-reveal>
       <p class="sticky-label">Testing and readiness</p>
-      <div class="prose"><h2>Proving the system before depending on it.</h2><p>I coordinated acceptance testing and stakeholder review across information routing, meeting workflows, report parity, privacy safeguards, continuity rehearsals, and recovery backups. Recovery materials were packaged, checksum-verified, downloaded back for integrity verification, and stored under restricted access.</p><p>I also direct continuing development of a least-privilege, review-gated Discord bridge for operational intake, developer accountability, reminders, and Dev Tracker updates.</p></div>
+      <div class="prose"><h2>Proving the system before depending on it.</h2><p>I coordinated acceptance testing and stakeholder review across information routing, meeting workflows, report parity, continuity rehearsals, and recovery backups. Recovery materials were packaged, checksum-verified, and downloaded back to confirm their integrity.</p><p>I also direct continuing development of a review-gated Discord bridge for operational intake, developer accountability, reminders, and Dev Tracker updates.</p></div>
     </section>
 
     <section class="split-layout section" data-reveal>
