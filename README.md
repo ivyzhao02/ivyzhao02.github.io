@@ -34,6 +34,8 @@ The editable source for the current public resume is stored with Ivy's career ma
 
 Run `python scripts/validate_site.py` before publishing. The same validation runs automatically through GitHub Actions on pushes to `main` and pull requests.
 
+Google Analytics uses measurement ID `G-XYHKNGK1D8`. The validator confirms that every public HTML page contains exactly one matching loader and configuration call.
+
 ## Local preview
 
 Open `index.html` directly or serve the folder with any static file server.

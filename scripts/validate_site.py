@@ -15,6 +15,8 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 HTML_FILES = sorted(ROOT.glob("*.html"))
 SITE_URL = "https://ivyzhao.ca"
+GOOGLE_TAG_ID = "G-XYHKNGK1D8"
+GOOGLE_TAG_SRC = f"https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG_ID}"
 REQUIRED_META_NAMES = {
     "description",
     "theme-color",
@@ -144,6 +146,12 @@ def validate_page(page: Path, errors: list[str], parsed_pages: dict[Path, PagePa
             + ", ".join(parser.target_blank_without_rel)
         )
 
+    if text.count(GOOGLE_TAG_SRC) != 1:
+        errors.append(f"{page.name}: expected one Google tag loader for {GOOGLE_TAG_ID}")
+    config_pattern = rf"gtag\(\s*['\"]config['\"]\s*,\s*['\"]{re.escape(GOOGLE_TAG_ID)}['\"]\s*\)"
+    if len(re.findall(config_pattern, text)) != 1:
+        errors.append(f"{page.name}: expected one Google tag config for {GOOGLE_TAG_ID}")
+
     for block in parser.json_ld_blocks:
         try:
             json.loads(block)
@@ -234,7 +242,10 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print(f"Validated {len(HTML_FILES)} HTML pages, local references, metadata, UTF-8, and sitemap coverage.")
+    print(
+        f"Validated {len(HTML_FILES)} HTML pages, Google tag coverage, local references, "
+        "metadata, UTF-8, and sitemap coverage."
+    )
     return 0
 
 
