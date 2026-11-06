@@ -12,11 +12,11 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A BlightFall case study by Ivy Zhao covering product strategy, project operations, reporting, implementation direction, acceptance testing, and AI-assisted delivery.">
+  <meta name="description" content="How Ivy Zhao planned, directed, and tested BlightFall's move from Notion to a shared system for decisions, tasks, project history, and reporting.">
   <meta name="theme-color" content="#f8faf3">
   <link rel="canonical" href="https://ivyzhao.ca/blightfall-operations.html">
   <meta property="og:title" content="BlightFall Operations &amp; Product Infrastructure | Ivy Zhao">
-  <meta property="og:description" content="Repository-backed project operations, controlled changes, portable reporting, and AI-assisted delivery for a distributed Roblox team.">
+  <meta property="og:description" content="How Ivy Zhao planned, directed, and tested BlightFall's move from Notion to a shared system for decisions, tasks, project history, and reporting.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ivy Zhao">
   <meta property="og:locale" content="en_CA">
@@ -27,7 +27,7 @@
   <meta property="og:image:alt" content="ivyzhao.ca - games communications, community, and content">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BlightFall Operations &amp; Product Infrastructure | Ivy Zhao">
-  <meta name="twitter:description" content="Operations design, information governance, reporting, QA, and AI-assisted delivery for an ongoing private Roblox project.">
+  <meta name="twitter:description" content="How Ivy Zhao planned, directed, and tested BlightFall's move from Notion to a shared system for decisions, tasks, project history, and reporting.">
   <meta name="twitter:image" content="https://ivyzhao.ca/assets/ivyzhao-social-preview.png">
   <meta name="twitter:image:alt" content="ivyzhao.ca - games communications, community, and content">
   <title>BlightFall Operations &amp; Product Infrastructure | Ivy Zhao</title>
@@ -43,70 +43,18 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html" aria-label="Ivy Zhao, home"><span class="brand-mark" aria-hidden="true"></span>Ivy Zhao</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="about.html">About</a><a href="experience.html">Experience</a><a href="projects.html" aria-current="page">Work</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a></nav></div></header>
 
-  <main id="main" class="page-shell">
-    <header class="page-header case-header" data-reveal>
-      <p class="eyebrow">Operations and product infrastructure case study</p>
-      <h1 class="page-title">BlightFall Operations &amp; Product Infrastructure.</h1>
-      <p class="page-intro">As BlightFall&rsquo;s <strong>Community &amp; Operations Lead</strong>, I designed and operationalized a repository-backed project system for a distributed Roblox development team, replacing scattered workspace practices with structured records, controlled changes, portable reporting, and AI-assisted implementation workflows.</p>
-      <div class="tags"><span class="tag">2026 - Present</span><span class="tag">Community &amp; Operations Lead</span><span class="tag">Product strategy</span><span class="tag">Operations design</span><span class="tag">Acceptance testing</span></div>
-    </header>
-
-    <dl class="metric-grid" aria-label="BlightFall operations snapshot" data-reveal>
-      <div class="metric"><dt>Structured records</dt><dd class="metric-value">72</dd><dd class="metric-note">currently validated in the Ops Hub</dd></div>
-      <div class="metric"><dt>Migration review</dt><dd class="metric-value">168</dd><dd class="metric-note">Notion export entries preserved and reviewed</dd></div>
-      <div class="metric"><dt>Reporting contexts</dt><dd class="metric-value">5</dd><dd class="metric-note">internal, leadership, team, Discord, and external</dd></div>
-      <div class="metric"><dt>Project status</dt><dd class="metric-value">Ongoing</dd><dd class="metric-note">private Roblox game project</dd></div>
-    </dl>
-
-    <figure class="case-visual operations-flow" aria-labelledby="operations-flow-title" data-reveal>
-      <div class="case-visual-heading"><p class="section-kicker">At a glance</p><h2 id="operations-flow-title">A clearer route from project input to follow-through.</h2></div>
-      <div class="case-flow" role="list">
-        <div class="flow-step" role="listitem"><span>01</span><h3>Capture</h3><p>Decisions, actions, risks, meetings, resources, and ownership.</p></div>
-        <div class="flow-step" role="listitem"><span>02</span><h3>Review</h3><p>Proposed changes are checked before they become shared records.</p></div>
-        <div class="flow-step" role="listitem"><span>03</span><h3>Translate</h3><p>Project information becomes useful views for different audiences.</p></div>
-        <div class="flow-step" role="listitem"><span>04</span><h3>Continue</h3><p>Owners, dependencies, next steps, and recovery material stay traceable.</p></div>
-      </div>
-      <figcaption>I led the requirements, architecture, implementation direction, testing, and adoption of the system across the team.</figcaption>
-    </figure>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Context and role</p>
-      <div class="prose"><h2>Building continuity around the game.</h2><p class="lead">My role combines operations leadership, product thinking, systems design, implementation direction, documentation, stakeholder coordination, and acceptance testing.</p><p>BlightFall is an ongoing Roblox project in development. As the team&rsquo;s operational needs grew, I led a staged move away from subscription-dependent Notion infrastructure toward a maintainable system the project could own, validate, and recover.</p></div>
-    </section>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Migration strategy</p>
-      <div class="prose"><h2>Preserve first, retire carefully.</h2><p>I evaluated the existing workspace, classified what needed to be retained, and organized the migration into approval-gated work packages. Each package included testing, rollback, continuity, and retirement criteria so the team could move deliberately without losing useful project history.</p><p>The review preserved and assessed a 168-entry Notion export. The team is retiring the older infrastructure in stages, using parity and recoverability checks to guide each transition.</p></div>
-    </section>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Source of truth</p>
-      <div class="prose"><h2>Connecting the tools without confusing their roles.</h2><p>I designed the source-of-truth architecture across the game repository, Ops Hub, Dev Tracker, cloud documents, AI workspaces, development tools, and planned Discord integrations. The model gives each system a clear purpose while keeping decisions, ownership, dependencies, evidence references, and follow-through traceable.</p><p>The internal Ops Hub now validates 72 structured records covering decisions, actions, workstreams, risks, meetings, people, resources, ownership, relationships, and next steps.</p><div class="compact-list"><span>Decisions &amp; actions</span><span>Workstreams &amp; risks</span><span>Ownership &amp; dependencies</span><span>Meetings &amp; follow-through</span><span>Resources &amp; evidence references</span></div></div>
-    </section>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Controlled changes</p>
-      <div class="prose"><h2>Making operational updates reviewable and recoverable.</h2><p>I directed the introduction of preview-and-apply transactions, validation, revision checks, audit history, and recovery procedures. Changes can be checked before they are applied, conflicting revisions are caught, and the resulting history remains understandable later.</p><p>Automated transaction, relationship, privacy, and regression checks help protect the quality of the shared records as the system evolves.</p></div>
-    </section>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Reporting and handoffs</p>
-      <div class="prose"><h2>Turning project records into useful views.</h2><p>I directed and tested audience-aware reporting for internal, leadership, team-facing, Discord-ready, and external use. Outputs include formatted previews, Markdown and PDF exports, concise Discord summaries, and weekly digests.</p><p>I also designed a structured AI-assisted handoff that turns planning conversations into traceable, reviewable implementation requests.</p></div>
-    </section>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Testing and readiness</p>
-      <div class="prose"><h2>Proving the system before depending on it.</h2><p>I coordinated acceptance testing and stakeholder review across information routing, meeting workflows, report parity, continuity rehearsals, and recovery backups. Recovery materials were packaged, checksum-verified, and downloaded back to confirm their integrity.</p><p>I also direct continuing development of a review-gated Discord bridge for operational intake, developer accountability, reminders, and Dev Tracker updates.</p></div>
-    </section>
-
-    <section class="split-layout section" data-reveal>
-      <p class="sticky-label">Project foundation</p>
-      <div class="prose"><h2>Preparing for a project that can grow responsibly.</h2><p>Alongside the internal operations work, I established the official <strong>blightfall.ca</strong> domain, business-email foundation, account-recovery planning, and a multi-platform social presence.</p><p>Together, these systems replace ad-hoc operational knowledge with a maintainable foundation for project continuity, institutional memory, accountability, and future company readiness.</p></div>
-    </section>
-
-    <section class="coming-soon" data-reveal><h2>What this demonstrates</h2><div><p>Experience that transfers directly to:</p><ul class="future-cases"><li>Product operations</li><li>Production coordination</li><li>Systems and workflow design</li><li>Information governance</li><li>Documentation and reporting</li><li>Acceptance testing and QA</li><li>Stakeholder coordination</li><li>AI-assisted delivery</li></ul></div></section>
-
-    <section class="cta-band" data-reveal><h2>Operations and community, together.</h2><div><p>The companion community case study covers Discord leadership, moderation, live developer events, player feedback, and member support for the same project.</p><a class="button" href="community-leadership.html">View community work <span aria-hidden="true">&#8599;</span></a></div></section>
+  <main id="main" class="page-shell case-page">
+    <header class="page-header case-header" data-reveal><p class="eyebrow">BlightFall / Community &amp; Operations Lead</p><h1 class="page-title">BlightFall Operations &amp; Product Infrastructure.</h1><p class="page-intro">I planned a staged move from Notion to a shared system for BlightFall&rsquo;s decisions, tasks, and project history. I designed how that information would be organized, directed implementation, and reviewed and tested the results with the team.</p><p class="case-status">Migration completed in August 2026.</p></header>
+    <section class="split-layout section" data-reveal><p class="sticky-label">The practical need</p><div class="prose"><h2>Why change the workspace?</h2><p>The team needed a way to keep its planning and project history available without depending on a Notion subscription. I reviewed the existing workspace, identified what needed to be kept, and organized the move into smaller stages. That review covered 168 exported entries.</p></div></section>
+    <section class="split-layout section" data-reveal><p class="sticky-label">A migration decision</p><div class="prose"><h2>Check each stage before relying on it.</h2><p>I planned each stage so the team could check the new version before relying on it. I defined what to preserve, what a successful transfer would look like, and how to recover if a change went wrong. The migration was accepted after testing and an observation period, and the old workspace was retired in August 2026.</p></div></section>
+    <section class="split-layout section" data-reveal><p class="sticky-label">Information design</p><div class="prose"><h2>Giving project information a home.</h2><p>I designed a shared home for decisions, actions, risks, and meeting notes, with owners and next steps attached. I also specified how it would connect with the team&rsquo;s development tracker and reference documents.</p></div></section>
+    <figure class="case-visual operations-flow" aria-labelledby="operations-flow-title" data-reveal><div class="case-visual-heading"><p class="section-kicker">Reconstructed example</p><h2 id="operations-flow-title">From a team decision to a useful update.</h2></div><ol class="case-flow"><li class="flow-step"><span>01</span><h3>Discuss</h3><p>A team discussion produces a decision and a next step.</p></li><li class="flow-step"><span>02</span><h3>Record</h3><p>The proposed record identifies the decision, owner, and next step.</p></li><li class="flow-step"><span>03</span><h3>Review</h3><p>The change is reviewed before it is added to the shared records.</p></li><li class="flow-step"><span>04</span><h3>Share</h3><p>The relevant information can then appear in a team update.</p></li></ol><figcaption>An illustrative walkthrough of the decision-recording and reporting workflow.</figcaption></figure>
+    <section class="split-layout section" data-reveal><p class="sticky-label">My contribution</p><div class="prose"><h2>Planning, implementation direction, and review.</h2><p>I planned the migration, designed the information layout, and wrote the requirements and review criteria. I directed implementation with AI tools, reviewed the outputs, and coordinated testing and feedback with the team.</p><p>I also specified checks so changes could be reviewed before they were saved, conflicting updates could be caught, and a history of changes would remain available.</p></div></section>
+    <section class="split-layout section" data-reveal><p class="sticky-label">Reporting</p><div class="prose"><h2>Making the information useful to different people.</h2><p>I specified and tested ways to turn the same project records into useful updates for leadership and the team. These include readable previews, downloadable reports, short Discord summaries, and weekly digests.</p></div></section>
+    <section class="split-layout section" data-reveal><p class="sticky-label">Testing and acceptance</p><div class="prose"><h2>Checking the move before relying on it.</h2><p>I coordinated checks of meeting workflows, how information moved between tools, and whether reports matched their source records. I also checked backup copies and brought the team into the review before each transition.</p></div></section>
+    <section class="split-layout section" data-reveal><p class="sticky-label">The result</p><div class="prose"><h2>Decisions, ownership, and updates in one place.</h2><p>The completed migration gave the team a consistent way to record decisions, find ownership and next steps, and prepare updates from the same project information. Alongside the workspace, I established the project&rsquo;s domain, business email foundation, and social presence.</p></div></section>
+    <details class="case-technical" data-reveal><summary>More about the implementation</summary><div class="prose"><p>The workspace stores structured records in a private repository. Automated checks support record quality, reviewable updates, and recovery. Reporting can produce Markdown and PDF files as well as shorter summaries.</p></div></details>
+    <section class="cta-band" data-reveal><h2>The community side of BlightFall.</h2><div><p>See how I handle player feedback, support moderators and new members, and run live conversations with developers.</p><a class="button" href="community-leadership.html">Explore the community work <span aria-hidden="true">&#8599;</span></a></div></section>
   </main>
 
   <footer class="site-footer-wrap"><div class="site-footer"><span>&copy; <span data-year></span> Ivy Zhao &middot; Ontario, Canada</span><div class="footer-links"><a href="mailto:ivy.zhao.career@gmail.com">Email</a><a href="https://www.linkedin.com/in/ivyzhao02" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="changelog.html">Changelog</a><a href="resume.html">Resume</a></div></div></footer>
